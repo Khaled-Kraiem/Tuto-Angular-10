@@ -9,6 +9,15 @@ import { TutorialsListComponent } from './components/tutorials-list/tutorials-li
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UploadFilesComponent } from './components/upload-files/upload-files.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
+import { HomeComponent } from './components/auth/home/home.component';
+import { ProfileComponent } from './components/auth/profile/profile.component';
+import { BoardAdminComponent } from './components/auth/board-admin/board-admin.component';
+import { BoardModeratorComponent } from './components/auth/board-moderator/board-moderator.component';
+import { BoardUserComponent } from './components/auth/board-user/board-user.component';
+
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -16,7 +25,14 @@ import { UploadFilesComponent } from './components/upload-files/upload-files.com
     AddTutorialComponent,
     TutorialDetailsComponent,
     TutorialsListComponent,
-    UploadFilesComponent
+    UploadFilesComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    ProfileComponent,
+    BoardAdminComponent,
+    BoardModeratorComponent,
+    BoardUserComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +40,7 @@ import { UploadFilesComponent } from './components/upload-files/upload-files.com
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
