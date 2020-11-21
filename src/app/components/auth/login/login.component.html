@@ -1,9 +1,12 @@
-<div class="col-md-12">
-    <div class="card card-container">
+<div class="container espace">
+  <div class="row">
+  <div class="col-sm"></div>
+    <div class="card card-container col-sm">
       <img
         id="profile-img"
         src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-        class="profile-img-card"
+        class="profile-img-card center image"
+        width="200" height="200"
       />
       <form
         *ngIf="!isLoggedIn"
@@ -72,4 +75,6 @@
         Logged in as {{ roles }}.
       </div>
     </div>
+    <div class="col-sm"></div>
   </div>
+</div>
